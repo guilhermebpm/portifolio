@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type React from 'react';
 
 type NavbarItemProps = {
@@ -27,7 +26,7 @@ function NavbarItem(props: NavbarItemProps) {
 	);
 }
 
-function Navbar() {
+export function Navbar() {
 	return (
 		<ul className='flex flex-row rounded-full border border-zinc-500/5 bg-white px-3 shadow-lg'>
 			<NavbarItem path='#'>Home</NavbarItem>
@@ -37,17 +36,5 @@ function Navbar() {
 			<NavbarItem path='#'>Projects</NavbarItem>
 			<NavbarItem path='#'>Uses</NavbarItem>
 		</ul>
-	);
-}
-
-export default function Home() {
-	return (
-		<main>
-			<header className='flex h-18 items-center justify-between px-24 pt-6 pb-2'>
-				<div className='size-5 opacity-0'></div>
-				<Navbar />
-				<div className='size-5 bg-blue-500'></div>
-			</header>
-		</main>
 	);
 }
