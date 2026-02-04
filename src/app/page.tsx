@@ -1,4 +1,6 @@
 import { Navbar } from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
 
 export default function Home() {
 	return (
@@ -8,6 +10,9 @@ export default function Home() {
 				<Navbar />
 				<div className='size-5 bg-blue-500'></div>
 			</header>
+
+         {/* Footer at the bottom */}
+             <Footer />
 		</main>
 	);
 }
