@@ -59,3 +59,4 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
     </article>
   );
 };
+// Article card component to display article information
