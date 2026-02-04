@@ -1,3 +1,6 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import type React from 'react';
 
 type NavbarItemProps = {
@@ -26,15 +29,22 @@ function NavbarItem(props: NavbarItemProps) {
 	);
 }
 
+const navLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/about', label: 'About' },
+	{ href: '/projects', label: 'Projects' },
+	{ href: '/uses', label: 'Uses' },
+];
+
 export function Navbar() {
+	const path = usePathname();
 	return (
 		<ul className='flex flex-row rounded-full border border-zinc-500/5 bg-white px-3 shadow-lg'>
-			<NavbarItem path='#'>Home</NavbarItem>
-			<NavbarItem path='#' active={true}>
-				About
-			</NavbarItem>
-			<NavbarItem path='#'>Projects</NavbarItem>
-			<NavbarItem path='#'>Uses</NavbarItem>
+			{navLinks.map((link) => (
+				<NavbarItem key={link.href} path={link.href} active={link.href === path}>
+					{link.label}
+				</NavbarItem>
+			))}
 		</ul>
 	);
 }

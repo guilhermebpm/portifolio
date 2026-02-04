@@ -22,6 +22,27 @@
 		],
 		"description": "Create a client component with TypeScript"
 	},
+	"Server Page": {
+		"prefix": "serverpage",
+		"body": [
+			"type PageProps = {",
+			"\tparams: Promise<{ ${1:slug}: ${2:string} }>;",
+			"};",
+			"",
+			"const Page = async ({ params }: PageProps) => {",
+			"\tconst { ${1:slug} } = await params;",
+			"",
+			"\treturn (",
+			"\t\t<div>",
+			"\t\t\t<h1>${3:Page Title}</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			"",
+			"export default Page;"
+		],
+		"description": "Create a server-side page component for Next.js App Router"
+	},
 	"React Context Provider": {
 		"prefix": "provider",
 		"body": [
