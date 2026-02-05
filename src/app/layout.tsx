@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+
+import { Navbar } from '@/components/Navbar';
 import './globals.css';
 
 const robotoSans = Roboto({
@@ -19,7 +21,24 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${robotoSans.variable} font-sans antialiased`}>{children}</body>
+			<body className={`${robotoSans.variable} font-sans antialiased`}>
+				<div className='mx-auto flex h-18 w-full flex-row items-center justify-between'>
+					{/* Left box */}
+					<div className='mb-2 ml-24 h-20'></div>
+
+					{/* Navigation bar */}
+					<div className='mb-2 flex flex-1 justify-center'>
+						<Navbar />
+					</div>
+
+					{/* Light button */}
+					<div className='mr-24 mb-2 h-10 w-12 rounded-full border border-gray-400/10 bg-white-500/90 p-1 text-center text-2xl shadow-lg backdrop-blur-md'>
+						<button>💡</button>
+					</div>
+				</div>
+				{/* main contant */}
+				<main className='mt-3 ml-10 mr-10 bg-white p-5 text-[16px] font-roboto text-gray-300'>{children}</main>
+			</body>
 		</html>
 	);
 }
