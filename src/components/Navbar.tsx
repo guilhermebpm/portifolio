@@ -40,6 +40,13 @@ function NavbarItem({ children, path }: NavbarItemProps) {
   );
 }
 
+const navLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/about', label: 'About' },
+	{ href: '/projects', label: 'Projects' },
+	{ href: '/uses', label: 'Uses' },
+];
+
 export function Navbar() {
   return (
     <nav className="fixed top-5 left-1/2 -translate-x-1/2"> 

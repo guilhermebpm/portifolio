@@ -4,6 +4,9 @@ import { Roboto } from 'next/font/google';
 import { Navbar } from '@/components/Navbar';
 import './globals.css';
 
+import { Footer } from '@/components/Footer';
+
+
 const robotoSans = Roboto({
 	variable: '--font-roboto-sans',
 	subsets: ['latin'],
@@ -21,6 +24,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+			
 			<body className={`${robotoSans.variable} font-sans antialiased`}>
 				<div className='mx-auto flex h-18 w-full flex-row items-center justify-between'>
 					{/* Left box */}
@@ -38,6 +42,7 @@ export default function RootLayout({
 				</div>
 				{/* main contant */}
 				<main className='mt-3 ml-10 mr-10 bg-white p-5 text-[16px] font-roboto text-gray-300'>{children}</main>
+				<Footer />
 			</body>
 		</html>
 	);
