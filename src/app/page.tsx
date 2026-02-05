@@ -1,40 +1,52 @@
 import { ArticleCard } from '@/components/ArticleCard';
-
-export default function Page() {
-	return (
-		<div className="p-8">
-			<h1 className="text-3xl font-bold mb-8">Home</h1>
-			
-			<div className="max-w-2xl">
-				<ArticleCard
-					date="December 25, 2023"
-					title="Lorem ipsum dolor sit amet"
-					excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue..."
-					href="/article/lorem-ipsum"
-				/>
-				<ArticleCard
-					date="January 5, 2024"
-					title="Building a modern React application with Next.js"
-					excerpt="Learn how to structure, style, and deploy a production-ready React application using the Next.js App Router, TypeScript, and Tailwind CSS. We walk through file-based routing, data fetching, and performance optimizations."
-					href="/article/nextjs-modern-react-app"
-				/>
-				<ArticleCard
-					date="February 10, 2024"
-					title="Improving web performance with code splitting"
-					excerpt="Code splitting allows you to load only the JavaScript needed for the current page, dramatically reducing initial bundle size. This guide covers dynamic imports, route-based splits, and best practices for caching."
-					href="/article/code-splitting-performance"
-				/>
-			</div>
-		</div>
-	);
-import ProjectCard from '../components/projectcard';
+import { HeroSection } from '@/components/HeroSection';
+import { NewsletterCard } from '@/components/NewsletterCard';
+import { WorkCard } from '@/components/WorkCard';
+import { SkillsCard } from '@/components/SkillsCard';
 
 export default function Home() {
-  return (
-    <main>
-      <div>
-        <ProjectCard />
-      </div>
-    </main>
-  );
+	return (
+		<main className="w-full max-w-[1280px] mx-auto px-6 md:px-8 lg:px-[144px] pt-24 md:pt-32 pb-16">
+			{/* Hero Section */}
+			<div className="mb-12 md:mb-16">
+				<HeroSection />
+			</div>
+
+			{/* Main Content Grid */}
+			<div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+				{/* Left Column - Articles */}
+				<div className="flex-1 order-2 lg:order-1">
+					<div className="space-y-0">
+						<ArticleCard
+							date="December 25, 2023"
+							title="Lorem ipsum dolor sit amet"
+							excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue..."
+							href="/article/lorem-ipsum"
+						/>
+						<ArticleCard
+							date="December 25, 2023"
+							title="Lorem ipsum dolor sit amet"
+							excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue..."
+							href="/article/lorem-ipsum-2"
+						/>
+						<ArticleCard
+							date="December 25, 2023"
+							title="Lorem ipsum dolor sit amet"
+							excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue..."
+							href="/article/lorem-ipsum-3"
+						/>
+					</div>
+				</div>
+
+				{/* Right Column - Sidebar */}
+				<div className="w-full lg:w-[368px] flex-shrink-0 order-1 lg:order-2">
+					<div className="space-y-6">
+						<NewsletterCard />
+						<WorkCard />
+						<SkillsCard />
+					</div>
+				</div>
+			</div>
+		</main>
+	);
 }
