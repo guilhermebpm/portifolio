@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-import './globals.css';
-
-import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
+import './globals.css';
+import Image from 'next/image';
+import { Footer } from '@/components/Footer';
+
 
 const robotoSans = Roboto({
 	variable: '--font-roboto-sans',
@@ -22,17 +23,27 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${robotoSans.variable} bg-zinc-50 px-20 font-sans antialiased`}>
-				<div className='flex min-h-screen flex-col bg-white'>
-					<header className='flex h-18 items-center justify-between px-24 pt-6 pb-2'>
-						<div className='size-5 opacity-0'></div>
+			
+			<body className={`${robotoSans.variable} font-sans antialiased`}>
+				<div className='mx-auto flex h-18 w-full flex-row items-center justify-between'>
+					{/* Left box */}
+					<div className='ml-36 mb-2 h-20 bg-amber-800'></div>
+
+					{/* Navigation bar */}
+					<div className='mb-2 flex flex-1 justify-center'>
 						<Navbar />
-						<div className='size-5 opacity-0'>placeholder for theme switcher</div>
-					</header>
-					<main className='flex-1'>{children}</main>
-					<Footer />
+					</div>
+
+					{/* Light button */}
+					<div className='fixed top-3 right-0 hover:scale-110 transition-transform mr-36 mt-2 h-10 w-12 flex items-center justify-center rounded-full border border-gray-400/10 bg-white-500/90 p-1 text-center text-2xl shadow-lg backdrop-blur-md '>
+						<button className='flex items-center justify-center '><Image src='./sun.svg' alt='Sun icon' width={28} height={28}/></button>
+					</div>
 				</div>
+				{/* main contant */}
+				<main className='mt-3 ml-10 mr-10 pb-150 bg-white p-5 text-[16px] font-roboto text-gray-300'>{children}</main>
+				
 			</body>
+			<Footer />
 		</html>
 	);
 }

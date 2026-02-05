@@ -17,3 +17,11 @@
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-roboto-sans);
 }
+
+@layer base {
+	.body {
+		padding: 0;
+		margin-left: 144px;
+		margin-right: 144px;
+	}
+}

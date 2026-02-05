@@ -27,4 +27,14 @@ export default function Page() {
 			</div>
 		</div>
 	);
+import ProjectCard from '../components/projectcard';
+
+export default function Home() {
+  return (
+    <main>
+      <div>
+        <ProjectCard />
+      </div>
+    </main>
+  );
 }
