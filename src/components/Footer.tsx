@@ -1,23 +1,37 @@
-export default function Footer() {
+'use client';
+
+import Link from 'next/link';
+import type React from 'react';
+
+type FooterProps = {
+	name?: string;
+};
+
+const navLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/about', label: 'About' },
+	{ href: '/projects', label: 'Projects' },
+	{ href: '/uses', label: 'Uses' },
+];
+
+export function Footer() {
   return (
-    <footer className="w-full border-t border-gray-200 bg-white mt-16">
-      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+    <footer className="w-full border-t border-zinc-100 bg-white">  {/*dark:border-zinc-700/40 dark:bg-zinc-900 add this for dark mode*/}
+      <div className="mx-auto w-full max-w-[1280px] flex flex-col items-center gap-3 px-8 pt-10 pb-16 md:flex-row md:items-center md:justify-between md:px-[144px] md:pt-[40px] md:pb-[64px]">
 
-        {/* Left Side */}
-
-        <nav className="flex gap-6 mb-4 md:mb-0">
-          <a href="/" className="hover:text-black ">Home</a>
-          <a href="/about" className="hover:text-black ">About</a>
-          <a href="/projects" className="hover:text-black ">Projects</a>
-          <a href="/uses" className="hover:text-black ">Uses</a>
+        <nav className="flex gap-6">
+          <a href="#" className="pt-2 pb-2 text-base leading-7 font-normal text-zinc-800 hover:text-black ">Home</a>      {/*dark:text-zinc-300 dark:hover:text-white add this for dark mode*/}
+          <a href="#" className="pt-2 pb-2 text-base leading-7 font-normal text-zinc-800 hover:text-black ">About</a>     {/*dark:text-zinc-300 dark:hover:text-white add this for dark mode*/}
+          <a href="#" className="pt-2 pb-2 text-base leading-7 font-normal text-zinc-800 hover:text-black ">Projects</a>  {/*dark:text-zinc-300 dark:hover:text-white add this for dark mode*/}
+          <a href="#" className="pt-2 pb-2 text-base leading-7 font-normal text-zinc-800 hover:text-black ">Uses</a>      {/*dark:text-zinc-300 dark:hover:text-white add this for dark mode*/}
         </nav>
 
-        {/* Right Side */}
-
-        <p className="text-zinc-400 text-center md:text-right">
-          © {new Date().getFullYear()} John Doe. All rights reserved.
+        <p className="text-sm leading-6 font-normal text-zinc-400"> {/*dark:text-zinc-500* add this for dark mode*/}
+          © 2024 John Doe. All rights reserved.
         </p>
+
       </div>
     </footer>
   );
 }
+Footer.displayName = 'Footer';

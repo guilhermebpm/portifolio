@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
 
+import { Footer } from '@/components/Footer';
+import { Navbar } from '@/components/Navbar';
+
 const robotoSans = Roboto({
 	variable: '--font-roboto-sans',
 	subsets: ['latin'],
@@ -19,7 +22,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${robotoSans.variable} font-sans antialiased`}>{children}</body>
+			<body className={`${robotoSans.variable} bg-zinc-50 px-20 font-sans antialiased`}>
+				<div className='flex min-h-screen flex-col bg-white'>
+					<header className='flex h-18 items-center justify-between px-24 pt-6 pb-2'>
+						<div className='size-5 opacity-0'></div>
+						<Navbar />
+						<div className='size-5 opacity-0'>placeholder for theme switcher</div>
+					</header>
+					<main className='flex-1'>{children}</main>
+					<Footer />
+				</div>
+			</body>
 		</html>
 	);
 }
