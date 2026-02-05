@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-
 import { Navbar } from '@/components/Navbar';
 import './globals.css';
-
+import Image from 'next/image';
 import { Footer } from '@/components/Footer';
 
 
@@ -36,8 +35,8 @@ export default function RootLayout({
 					</div>
 
 					{/* Light button */}
-					<div className='mr-36 mt-2 h-10 w-12 rounded-full border border-gray-400/10 bg-white-500/90 p-1 text-center text-2xl shadow-lg backdrop-blur-md'>
-						<button>💡</button>
+					<div className='fixed top-3 right-0 hover:scale-110 transition-transform mr-36 mt-2 h-10 w-12 flex items-center justify-center rounded-full border border-gray-400/10 bg-white-500/90 p-1 text-center text-2xl shadow-lg backdrop-blur-md '>
+						<button className='flex items-center justify-center '><Image src='./sun.svg' alt='Sun icon' width={28} height={28}/></button>
 					</div>
 				</div>
 				{/* main contant */}
