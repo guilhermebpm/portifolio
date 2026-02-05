@@ -11,7 +11,7 @@ const navLinks = [
 	{ href: '/', label: 'Home' },
 	{ href: '/about', label: 'About' },
 	{ href: '/projects', label: 'Projects' },
-	{ href: '/uses', label: 'Uses' },
+	{ href: '/users', label: 'Uses' },
 ];
 
 export const Footer: React.FC<FooterProps> = ({ name = 'John Doe' }) => {
