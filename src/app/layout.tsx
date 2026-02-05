@@ -23,27 +23,32 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			
-			<body className={`${robotoSans.variable} font-sans antialiased`}>
-				<div className='mx-auto flex h-18 w-full flex-row items-center justify-between'>
-					{/* Left box */}
-					<div className='ml-36 mb-2 h-20 bg-amber-800'></div>
+			<body className={`${robotoSans.variable} font-sans antialiased bg-white min-h-screen`}>
+				{/* Header */}
+				<header className="fixed top-0 left-0 right-0 z-50">
+					<div className="w-full max-w-[1280px] mx-auto px-6 md:px-8 lg:px-[144px] py-4 flex items-center justify-between">
+						{/* Left spacer for desktop */}
+						<div className="hidden lg:block w-10" />
 
-					{/* Navigation bar */}
-					<div className='mb-2 flex flex-1 justify-center'>
+						{/* Navigation */}
 						<Navbar />
-					</div>
 
-					{/* Light button */}
-					<div className='fixed top-3 right-0 hover:scale-110 transition-transform mr-36 mt-2 h-10 w-12 flex items-center justify-center rounded-full border border-gray-400/10 bg-white-500/90 p-1 text-center text-2xl shadow-lg backdrop-blur-md '>
-						<button className='flex items-center justify-center '><Image src='./sun.svg' alt='Sun icon' width={28} height={28}/></button>
+						{/* Theme Toggle Button */}
+						<button 
+							className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-100 bg-white shadow-lg hover:scale-105 transition-transform"
+							aria-label="Toggle theme"
+						>
+							<Image src='/Sun.svg' alt='Toggle theme' width={24} height={24} />
+						</button>
 					</div>
-				</div>
-				{/* main contant */}
-				<main className='mt-3 ml-10 mr-10 pb-150 bg-white p-5 text-[16px] font-roboto text-gray-300'>{children}</main>
-				
+				</header>
+
+				{/* Main Content */}
+				{children}
+
+				{/* Footer */}
+				<Footer />
 			</body>
-			<Footer />
 		</html>
 	);
 }
