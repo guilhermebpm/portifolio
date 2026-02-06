@@ -18,15 +18,15 @@ export const Footer: React.FC<FooterProps> = ({ name = 'John Doe' }) => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className='flex items-center justify-between px-36 pt-10 pb-16'>
-			<nav className='flex gap-6'>
+		<footer className='flex flex-col md:flex-row items-center justify-between md:px-36 pt-10 pb-16'>
+			<nav className='flex gap-6 py-6'>
 				{navLinks.map((link) => (
 					<Link key={link.href} href={link.href} className='text-base transition-colors hover:text-zinc-800'>
 						{link.label}
 					</Link>
 				))}
 			</nav>
-			<p className='text-sm text-zinc-400'>
+			<p className='flex text-sm text-foreground'>
 				© {currentYear} {name}. All rights reserved.
 			</p>
 		</footer>
