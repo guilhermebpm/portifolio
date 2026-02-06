@@ -22,17 +22,17 @@ const skills: Skill[] = [
 	{
 		name: 'JavaScript',
 		level: 50,
-		icon: '/javascript.svg',
+		icon: '/js.svg',
 	},
 ];
 
 export function SkillsCard() {
 	return (
-		<div className="w-full rounded-2xl border border-zinc-100 bg-white p-6">
+		<div className="w-full rounded-2xl border border-foreground/10 bg-background p-6">
 			{/* Header */}
 			<div className="flex items-center gap-3 mb-4">
 				<svg
-					className="w-6 h-6 text-zinc-400"
+					className="w-6 h-6 text-foreground/40"
 					fill="none"
 					stroke="currentColor"
 					viewBox="0 0 24 24"
@@ -44,20 +44,20 @@ export function SkillsCard() {
 						d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
 					/>
 				</svg>
-				<h3 className="text-sm font-semibold text-zinc-900">Skills</h3>
+				<h3 className="text-sm font-semibold text-foreground">Skills</h3>
 			</div>
 
 			{/* Description */}
-			<p className="text-sm text-zinc-600 leading-6 mb-6">
+			<p className="text-sm text-foreground/40 leading-6 mb-6">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
 			</p>
 
 			{/* Skills List */}
-			<div className="space-y-4">
+			<div className="space-y-5">
 				{skills.map((skill, index) => (
 					<div key={index} className="flex items-center gap-4">
 						{/* Skill Icon */}
-						<div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+						<div className="w-10 h-14 py-1 rounded-full border border-foreground/10 bg-foreground/10 shadow-sm flex items-center justify-center overflow-hidden">
 							<Image
 								src={skill.icon}
 								alt={skill.name}
@@ -69,14 +69,14 @@ export function SkillsCard() {
 
 						{/* Skill Info */}
 						<div className="flex-1 min-w-0">
-							<h4 className="text-sm font-medium text-zinc-900 mb-2">{skill.name}</h4>
+							<h4 className="text-sm font-medium text-foreground/30 mb-2">{skill.name}</h4>
 							{/* Progress Bar */}
-							<div className="w-full h-2 bg-zinc-200 rounded-full overflow-hidden">
+							<div className="w-full h-5 bg-foreground/10 overflow-hidden">
 								<div
-									className="h-full rounded-full transition-all duration-500"
+									className="h-full transition-all duration-500"
 									style={{
 										width: `${skill.level}%`,
-										backgroundColor: '#14b8a6', // teal-500
+										backgroundColor: '#0E766E', // teal-500
 									}}
 								/>
 							</div>

@@ -24,12 +24,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='en' suppressHydrationWarning>
   <body className={`${robotoSans.variable} font-sans antialiased bg-background`}>
 		<ThemeProvider>
-    {/* Header Wrapper: Chuyển thông số 88px từ Figma */}
-    <header className='fixed top-0 z-60 w-full h-22 md:h-18 backdrop-blur-md'>
-      <div className='flex flex-row items-start justify-between w-full h-[88px] px-4 py-6 md:max-w-[1280px] md:h-[72px] md:pt-5 md:pb-5 md:px-24 mx-auto'>
+    
+    <header className='fixed z-60 w-full h-22 backdrop-blur-md md:h-18 md:px-20 mx-auto md:w-full'>
+      <div className='flex flex-row items-start justify-between w-full h-22 px-4 py-6 md:max-w-7xl md:h-18 md:pt-5 md:pb-5 md:px-24 mx-auto'>
         
         {/* Left box - Logo hoặc khoảng trống */}
-        <div className='hidden md:block md:w-12 md:h-10 '>
+        <div className='hidden md:block md:w-12 md:h-10'>
           {/* Bạn có thể đặt Logo ở đây */}
         </div>
 
@@ -49,14 +49,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </header>
 
     {/* Main Content */}
-    <main className='pt-[88px] md:pt-[72px] flex flex-col items-center w-full bg-background'>
-      <div className='w-full max-w-[1280px] px-4 pt-0 md:pt-6 pb-16 md:px-20 mx-auto'>
+    <main className='pt-22 md:pt-12 flex flex-col items-center w-full'>
+      <div className='w-full max-w-7xl px-4 pt-0 md:pt-6 pb-16 md:px-20 mx-auto'>
         {children}
       </div>
     </main>
 
     {/* Footer phải nằm TRONG body */}
-    <div className='w-full max-w-[1280px] px-4 md:px-20 mx-auto'><Footer /></div>
+    <div className='w-full max-w-7xl px-4 md:px-20 mx-auto'><Footer /></div>
 		</ThemeProvider>
   </body>
 </html>
