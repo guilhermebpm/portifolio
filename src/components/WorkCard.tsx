@@ -71,8 +71,8 @@ export function WorkCard() {
 							<Image
 								src={work.logo}
 								alt={work.company}
-								width={24}
-								height={24}
+								width={40}
+								height={40}
 								className="object-contain dark:bg-background dark:text-foreground"
 							/>
 						</div>
