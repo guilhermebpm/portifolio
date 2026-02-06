@@ -30,18 +30,13 @@ export function SkillsCard() {
 	return (
 		<div className="w-full rounded-2xl border border-zinc-100 bg-white p-6 dark:bg-background dark:text-foreground">
 			{/* Header */}
-			<div className="flex items-center gap-3 mb-4">
-				<svg
-					className="w-6 h-6 text-zinc-400"
-					fill="none"
-					stroke="currentColor"
-					viewBox="0 0 24 24"
-				>
+			<div className='mb-4 flex items-center gap-3'>
+				<svg className='h-6 w-6 text-zinc-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
+						strokeLinecap='round'
+						strokeLinejoin='round'
 						strokeWidth={1.5}
-						d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+						d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
 					/>
 				</svg>
 				<h3 className="text-sm font-semibold text-zinc-900 dark:bg-background dark:text-foreground">Skills</h3>
@@ -53,9 +48,9 @@ export function SkillsCard() {
 			</p>
 
 			{/* Skills List */}
-			<div className="space-y-4">
+			<div className='space-y-4'>
 				{skills.map((skill, index) => (
-					<div key={index} className="flex items-center gap-4">
+					<div key={index} className='flex items-center gap-4'>
 						{/* Skill Icon */}
 						<div className="w-10 h-10 rounded-full bg-white flex items-center justify-center flex-shrink-0 dark:bg-background dark:text-foreground">
 							<Image
