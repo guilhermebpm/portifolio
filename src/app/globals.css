@@ -7,7 +7,7 @@
 }
 
 /* Khi thẻ html có class="dark" */
-.dark {
+[data-theme="dark"] {
 	--background: #17171A;
 	--foreground: #ededed;
 }
