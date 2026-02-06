@@ -62,7 +62,7 @@ export function SkillsCard() {
 							{/* Progress Bar */}
 							<div className='h-2 w-full overflow-hidden rounded-full bg-input'>
 								<div
-									className='h-full rounded-full transition-all duration-500'
+									className="h-6 transition-all duration-500"
 									style={{
 										width: `${skill.level}%`,
 										backgroundColor: '#14b8a6', // teal-500
