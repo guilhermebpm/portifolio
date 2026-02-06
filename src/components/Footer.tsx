@@ -1,36 +1,44 @@
 'use client';
 
 import Link from 'next/link';
-import type React from 'react';
 
-type FooterProps = {
-	name?: string;
-};
-
-const navLinks = [
-	{ href: '/', label: 'Home' },
-	{ href: '/about', label: 'About' },
-	{ href: '/projects', label: 'Projects' },
-	{ href: '/users', label: 'Uses' },
-];
-
-export const Footer: React.FC<FooterProps> = ({ name = 'John Doe' }) => {
-	const currentYear = new Date().getFullYear();
-
+export function Footer() {
 	return (
-		<footer className='flex flex-col md:flex-row items-center justify-between md:px-36 pt-10 pb-16'>
-			<nav className='flex gap-6 py-6'>
-				{navLinks.map((link) => (
-					<Link key={link.href} href={link.href} className='text-base transition-colors hover:text-zinc-800'>
-						{link.label}
+		<footer className="w-full border-t border-zinc-100 bg-white">
+			<div className="mx-auto w-full max-w-7xl flex flex-col items-center gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-36 md:py-12">
+				{/* Navigation Links */}
+				<nav className="flex flex-wrap justify-center gap-6">
+					<Link
+						href="/"
+						className="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+					>
+						Home
 					</Link>
-				))}
-			</nav>
-			<p className='flex text-sm text-foreground'>
-				© {currentYear} {name}. All rights reserved.
-			</p>
+					<Link
+						href="/about"
+						className="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+					>
+						About
+					</Link>
+					<Link
+						href="/projects"
+						className="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+					>
+						Projects
+					</Link>
+					<Link
+						href="/users"
+						className="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+					>
+						Uses
+					</Link>
+				</nav>
+
+				{/* Copyright */}
+				<p className="text-sm text-zinc-400">© 2024 John Doe. All rights reserved.</p>
+			</div>
 		</footer>
 	);
-};
+}
 
 Footer.displayName = 'Footer';
