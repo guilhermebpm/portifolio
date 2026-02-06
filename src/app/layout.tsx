@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+
 import { Navbar } from '@/components/Navbar';
 import './globals.css';
 import Image from 'next/image';
+
 import { Footer } from '@/components/Footer';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { ThemeToggle } from '@/components/ThemeProvider';
-
-
+import { ThemeProvider, ThemeToggle } from '@/components/ThemeProvider';
 
 const robotoSans = Roboto({
 	variable: '--font-roboto-sans',
@@ -22,43 +21,40 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-  <body className={`${robotoSans.variable} font-sans antialiased bg-background`}>
-		<ThemeProvider>
-    {/* Header Wrapper: Chuyển thông số 88px từ Figma */}
-    <header className='fixed top-0 z-60 w-full h-22 md:h-18 backdrop-blur-md'>
-      <div className='flex flex-row items-start justify-between w-full h-[88px] px-4 py-6 md:max-w-[1280px] md:h-[72px] md:pt-5 md:pb-5 md:px-24 mx-auto'>
-        
-        {/* Left box - Logo hoặc khoảng trống */}
-        <div className='hidden md:block md:w-12 md:h-10 '>
-          {/* Bạn có thể đặt Logo ở đây */}
-        </div>
+			<body className={`${robotoSans.variable} bg-background font-sans antialiased`}>
+				<ThemeProvider>
+					{/* Header Wrapper: Chuyển thông số 88px từ Figma */}
+					<header className='fixed top-0 z-60 h-22 w-full backdrop-blur-md md:h-18'>
+						<div className='mx-auto flex h-[88px] w-full flex-row items-start justify-between px-4 py-6 md:h-[72px] md:max-w-[1280px] md:px-24 md:pt-5 md:pb-5'>
+							{/* Left box - Logo hoặc khoảng trống */}
+							<div className='hidden md:block md:h-10 md:w-12'>{/* Bạn có thể đặt Logo ở đây */}</div>
 
-				<div className='w-10 h-10 md:hidden'></div>
+							<div className='h-10 w-10 md:hidden'></div>
 
-        {/* Navigation bar - Căn giữa */}
-        <nav className='flex md:items-center md:justify-center md:overflow-hidden'>
-          <Navbar />
-        </nav>
+							{/* Navigation bar - Căn giữa */}
+							<nav className='flex md:items-center md:justify-center md:overflow-hidden'>
+								<Navbar />
+							</nav>
 
-        {/* Light button - Cố định hoặc nằm trong Flex */}
-      
-          <div className='flex items-center justify-center h-10 w-12 rounded-full bg-foreground shadow-lg hover:scale-110 transition-transform'>
-            <ThemeToggle />
-          </div>
-      </div>
-    </header>
+							{/* Light button - Cố định hoặc nằm trong Flex */}
 
-    {/* Main Content */}
-    <main className='pt-[88px] md:pt-[72px] flex flex-col items-center w-full bg-background'>
-      <div className='w-full max-w-[1280px] px-4 pt-0 md:pt-6 pb-16 md:px-20 mx-auto'>
-        {children}
-      </div>
-    </main>
+							<div className='flex h-10 w-12 items-center justify-center rounded-full bg-foreground shadow-lg transition-transform hover:scale-110'>
+								<ThemeToggle />
+							</div>
+						</div>
+					</header>
 
-    {/* Footer phải nằm TRONG body */}
-    <div className='w-full max-w-[1280px] px-4 md:px-20 mx-auto'><Footer /></div>
-		</ThemeProvider>
-  </body>
-</html>
+					{/* Main Content */}
+					<main className='flex w-full flex-col items-center bg-background pt-[88px] md:pt-[72px]'>
+						<div className='mx-auto w-full max-w-[1280px] px-4 pt-0 pb-16 md:px-20 md:pt-6'>{children}</div>
+					</main>
+
+					{/* Footer phải nằm TRONG body */}
+					<div className='mx-auto w-full max-w-[1280px] px-4 md:px-20'>
+						<Footer />
+					</div>
+				</ThemeProvider>
+			</body>
+		</html>
 	);
 }
