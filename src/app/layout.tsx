@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+
 import { Navbar } from '@/components/Navbar';
 import './globals.css';
 import Image from 'next/image';
+
 import { Footer } from '@/components/Footer';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { ThemeToggle } from '@/components/ThemeProvider';
-
-
+import { ThemeProvider, ThemeToggle } from '@/components/ThemeProvider';
 
 const robotoSans = Roboto({
 	variable: '--font-roboto-sans',

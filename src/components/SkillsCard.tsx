@@ -38,10 +38,10 @@ export function SkillsCard() {
 					viewBox="0 0 24 24"
 				>
 					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
+						strokeLinecap='round'
+						strokeLinejoin='round'
 						strokeWidth={1.5}
-						d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+						d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
 					/>
 				</svg>
 				<h3 className="text-sm font-semibold text-foreground">Skills</h3>
@@ -55,7 +55,7 @@ export function SkillsCard() {
 			{/* Skills List */}
 			<div className="space-y-5">
 				{skills.map((skill, index) => (
-					<div key={index} className="flex items-center gap-4">
+					<div key={index} className='flex items-center gap-4'>
 						{/* Skill Icon */}
 						<div className="w-10 h-14 py-1 rounded-full border border-foreground/10 bg-foreground/10 shadow-sm flex items-center justify-center overflow-hidden">
 							<Image
