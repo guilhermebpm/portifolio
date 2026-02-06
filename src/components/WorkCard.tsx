@@ -72,12 +72,12 @@ export function WorkCard() {
 				{workExperiences.map((work, index) => (
 					<div key={index} className="flex items-center gap-4 ">
 						{/* Company Logo */}
-						<div className="w-10 h-14 py-1 rounded-full border border-foreground/10 bg-foreground/10 shadow-sm flex items-center justify-center overflow-hidden">
+						<div className="w-10 h-10 py-1 rounded-full border border-foreground/10 bg-foreground/10 shadow-sm flex items-center justify-center overflow-hidden">
 							<Image
 								src={work.logo}
 								alt={work.company}
-								width={32}
-								height={32}
+								width={24}
+								height={24}
 								className="object-contain"
 							/>
 						</div>

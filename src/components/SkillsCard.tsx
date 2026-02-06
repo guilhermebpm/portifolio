@@ -28,7 +28,7 @@ const skills: Skill[] = [
 
 export function SkillsCard() {
 	return (
-		<div className="w-full rounded-2xl border border-foreground/10 bg-background p-6">
+		<div className="w-full rounded-2xl border border-foreground/10 p-6">
 			{/* Header */}
 			<div className="flex items-center gap-3 mb-4">
 				<svg
@@ -57,12 +57,12 @@ export function SkillsCard() {
 				{skills.map((skill, index) => (
 					<div key={index} className='flex items-center gap-4'>
 						{/* Skill Icon */}
-						<div className="w-10 h-14 py-1 rounded-full border border-foreground/10 bg-foreground/10 shadow-sm flex items-center justify-center overflow-hidden">
+						<div className="w-10 h-10 py-1 rounded-full border border-foreground/10 bg-foreground/10 shadow-sm flex items-center justify-center overflow-hidden">
 							<Image
 								src={skill.icon}
 								alt={skill.name}
-								width={32}
-								height={32}
+								width={24}
+								height={24}
 								className="object-contain"
 							/>
 						</div>
