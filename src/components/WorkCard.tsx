@@ -14,21 +14,21 @@ const workExperiences: WorkExperience[] = [
 	{
 		company: 'Slack',
 		role: 'SOFTWARE ENGINEER',
-		logo: '/slack.png',
+		logo: '/Slack.svg',
 		startYear: '2016',
 		endYear: 'Present',
 	},
 	{
 		company: 'Spotify',
 		role: 'SOFTWARE ENGINEER',
-		logo: '/spotify.svg',
+		logo: '/Spotify.svg',
 		startYear: '2014',
 		endYear: '2015',
 	},
 	{
 		company: 'Audible',
 		role: 'SOFTWARE ENGINEER',
-		logo: '/audible.png',
+		logo: '/Audible.svg',
 		startYear: '2012',
 		endYear: '2013',
 	},
@@ -43,10 +43,15 @@ const workExperiences: WorkExperience[] = [
 
 export function WorkCard() {
 	return (
-		<div className="w-full rounded-2xl border border-border bg-background p-6">
+		<div className="w-full rounded-2xl border border-foreground/10 bg-background p-6">
 			{/* Header */}
-			<div className='mb-4 flex items-center gap-3'>
-				<svg className='h-6 w-6 text-muted' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+			<div className="flex items-center gap-3 mb-4">
+				<svg
+					className="w-6 h-6 text-foreground/40"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+				>
 					<path
 						strokeLinecap='round'
 						strokeLinejoin='round'
@@ -58,33 +63,33 @@ export function WorkCard() {
 			</div>
 
 			{/* Description */}
-			<p className="text-sm text-muted-foreground leading-6 mb-6">
+			<p className="text-sm text-foreground/40 leading-6 mb-6">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
 			</p>
 
 			{/* Work List */}
 			<div className='space-y-4'>
 				{workExperiences.map((work, index) => (
-					<div key={index} className='flex items-center gap-4'>
+					<div key={index} className="flex items-center gap-4 ">
 						{/* Company Logo */}
-						<div className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center overflow-hidden flex-shrink-0">
+						<div className="w-10 h-14 py-1 rounded-full border border-foreground/10 bg-foreground/10 shadow-sm flex items-center justify-center overflow-hidden">
 							<Image
 								src={work.logo}
 								alt={work.company}
-								width={24}
-								height={24}
+								width={32}
+								height={32}
 								className="object-contain"
 							/>
 						</div>
 
 						{/* Company Info */}
-						<div className="flex-1 min-w-0 ">
-							<h4 className="text-sm font-medium text-foreground">{work.company}</h4>
-							<p className="text-xs text-muted">{work.role}</p>
+						<div className="flex-1 min-w-0">
+							<h4 className="text-sm font-medium text-foreground/70">{work.company}</h4>
+							<p className="text-xs text-foreground/40">{work.role}</p>
 						</div>
 
 						{/* Date Range */}
-						<span className='flex-shrink-0 text-xs text-muted'>
+						<span className="text-xs text-foreground/40 shrink-0">
 							{work.startYear} - {work.endYear}
 						</span>
 					</div>

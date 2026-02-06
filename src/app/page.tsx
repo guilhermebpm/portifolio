@@ -6,9 +6,9 @@ import { WorkCard } from '@/components/WorkCard';
 
 export default function Home() {
 	return (
-		<main className='mx-auto w-full max-w-[1280px] px-6 pt-24 pb-16 md:px-8 md:pt-32 lg:px-[144px]'>
+		<main className="w-full max-w-7xl mx-auto px-6 md:px-8 lg:px-36 pt-6 md:pt-0 pb-16">
 			{/* Hero Section */}
-			<div className='mb-12 md:mb-16'>
+			<div className="mb-12 md:mb-6">
 				<HeroSection />
 			</div>
 
