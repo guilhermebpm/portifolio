@@ -28,10 +28,10 @@ const skills: Skill[] = [
 
 export function SkillsCard() {
 	return (
-		<div className="w-full rounded-2xl border border-zinc-100 bg-white p-6 dark:bg-background dark:text-foreground">
+		<div className='w-full rounded-2xl border border-border bg-background p-6'>
 			{/* Header */}
 			<div className='mb-4 flex items-center gap-3'>
-				<svg className='h-6 w-6 text-zinc-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+				<svg className='h-6 w-6 text-muted' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 					<path
 						strokeLinecap='round'
 						strokeLinejoin='round'
@@ -39,11 +39,11 @@ export function SkillsCard() {
 						d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
 					/>
 				</svg>
-				<h3 className="text-sm font-semibold text-zinc-900 dark:bg-background dark:text-foreground">Skills</h3>
+				<h3 className='font-semibold text-sm text-foreground'>Skills</h3>
 			</div>
 
 			{/* Description */}
-			<p className="text-sm text-zinc-600 leading-6 mb-6 dark:bg-background dark:text-foreground">
+			<p className='mb-6 text-sm text-muted-foreground leading-6'>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
 			</p>
 
@@ -52,21 +52,15 @@ export function SkillsCard() {
 				{skills.map((skill, index) => (
 					<div key={index} className='flex items-center gap-4'>
 						{/* Skill Icon */}
-						<div className="w-10 h-10 rounded-full bg-white flex items-center justify-center flex-shrink-0 dark:bg-background dark:text-foreground">
-							<Image
-								src={skill.icon}
-								alt={skill.name}
-								width={48}
-								height={48}
-								className="object-contain dark:bg-background dark:text-foreground"
-							/>
+						<div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-background border border-border dark:border-zinc-700 dark:bg-zinc-700/20'>
+							<Image src={skill.icon} alt={skill.name} width={32} height={32} className='object-contain' />
 						</div>
 
 						{/* Skill Info */}
-						<div className="flex-1 min-w-0">
-							<h4 className="text-sm font-medium text-zinc-900 mb-2 dark:bg-background dark:text-foreground">{skill.name}</h4>
+						<div className='min-w-0 flex-1'>
+							<h4 className='mb-2 font-medium text-sm text-foreground'>{skill.name}</h4>
 							{/* Progress Bar */}
-							<div className="w-full h-6 bg-zinc-200  overflow-hidden">
+							<div className='h-2 w-full overflow-hidden rounded-full bg-input'>
 								<div
 									className="h-6 transition-all duration-500"
 									style={{

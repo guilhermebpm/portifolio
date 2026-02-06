@@ -12,25 +12,25 @@ interface ArticleCardProps {
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({ date, title, excerpt, href = '#' }) => {
     return (
-        <article className='relative bg-white dark:bg-zinc-900 py-6 md:py-8 md:pl-8'>
+        <article className='relative bg-background py-6 md:py-8 md:pl-8'>
             {/* Vertical Line - only visible on desktop */}
-            <div className='absolute top-6 left-0 hidden h-4 w-0.5 bg-zinc-200 dark:bg-zinc-700 md:block' />
+            <div className='absolute top-6 left-0 hidden h-4 w-0.5 bg-border md:block' />
 
             {/* Date */}
-            <time className='mb-3 block font-normal text-sm text-zinc-400 dark:text-zinc-500 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-2 md:no-underline'>
+            <time className='mb-3 block font-normal text-sm text-muted underline decoration-border underline-offset-2 md:no-underline'>
                 {date}
             </time>
 
             {/* Title */}
-            <h2 className='mb-3 font-semibold text-base text-zinc-800 dark:text-zinc-100 leading-tight'>{title}</h2>
+            <h2 className='mb-3 font-semibold text-base text-foreground leading-tight'>{title}</h2>
 
             {/* Excerpt */}
-            <p className='mb-4 text-sm text-zinc-500 dark:text-zinc-400 leading-6'>{excerpt}</p>
+            <p className='mb-4 text-sm text-muted-foreground leading-6'>{excerpt}</p>
 
             {/* Read More Link */}
             <Link
                 href={href}
-                className='group inline-flex items-center gap-2 font-medium text-sm text-teal-500 dark:text-teal-400 transition-colors hover:text-teal-600 dark:hover:text-teal-300'
+                className='group inline-flex items-center gap-2 font-medium text-sm text-accent transition-colors hover:text-teal-600 dark:hover:text-teal-300'
             >
                 Read article
                 <svg
