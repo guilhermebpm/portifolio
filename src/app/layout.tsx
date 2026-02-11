@@ -21,43 +21,43 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-  <body className={`${robotoSans.variable} font-sans antialiased bg-background`}>
-		<ThemeProvider>
-    
-    <header className='fixed z-60 w-full h-22 backdrop-blur-md md:h-18 md:px-20 mx-auto md:w-full'>
-      <div className='flex flex-row items-start justify-between w-full h-22 px-4 py-6 md:max-w-7xl md:h-18 md:pt-5 md:pb-5 md:px-24 mx-auto'>
-        
-        {/* Left box - Logo hoặc khoảng trống */}
-        <div className='hidden md:block md:w-12 md:h-10'>
-          {/* Bạn có thể đặt Logo ở đây */}
-        </div>
+			<body className={`${robotoSans.variable} bg-background font-sans antialiased`}>
+				<ThemeProvider>
+					<div className='flex min-h-screen flex-col'>
+						<header className='fixed z-60 mx-auto h-22 w-full backdrop-blur-md md:h-18 md:w-full md:px-20'>
+							<div className='mx-auto flex h-22 w-full flex-row items-start justify-between px-4 py-6 md:h-18 md:max-w-7xl md:px-24 md:pt-5 md:pb-5'>
+								{/* Left box - Logo */}
+								<div className='hidden md:block md:h-10 md:w-12'>{/* place a Logo here! */}</div>
 
-				<div className='w-10 h-10 md:hidden'></div>
+								<div className='h-10 w-10 md:hidden'></div>
 
-        {/* Navigation bar - Căn giữa */}
-        <nav className='flex md:items-center md:justify-center md:overflow-hidden'>
-          <Navbar />
-        </nav>
+								{/* Navigation bar */}
+								<nav className='flex md:items-center md:justify-center md:overflow-hidden'>
+									<Navbar />
+								</nav>
 
-        {/* Light button - Cố định hoặc nằm trong Flex */}
-      
-          <div className='flex items-center justify-center h-10 w-12 rounded-full bg-foreground shadow-lg hover:scale-110 transition-transform'>
-            <ThemeToggle />
-          </div>
-      </div>
-    </header>
+								{/* Light button */}
 
-    {/* Main Content */}
-    <main className='pt-22 md:pt-12 flex flex-col items-center w-full max-h-full bg-gray-100'>
-      <div className='w-full max-h-full max-w-7xl px-4 pt-0 md:pt-6 pb-16 md:px-20 mx-auto bg-amber-500'>
-        {children}
-      </div>
-    </main>
+								<div className='flex h-10 w-12 items-center justify-center rounded-full bg-foreground shadow-lg transition-transform hover:scale-110'>
+									<ThemeToggle />
+								</div>
+							</div>
+						</header>
 
-    {/* Footer phải nằm TRONG body */}
-    <div className='w-full max-w-7xl px-4 md:px-20 mx-auto'><Footer /></div>
-		</ThemeProvider>
-  </body>
-</html>
+						{/* Main Content */}
+						<main className='flex-1 pt-24 md:pt-28'>
+							<div className='mx-auto max-w-7xl px-6 md:px-20'>{children}</div>
+						</main>
+
+						{/* Footer */}
+						<footer className='w-full'>
+							<div className='mx-auto max-w-7xl px-6 md:px-20'>
+								<Footer />
+							</div>
+						</footer>
+					</div>
+				</ThemeProvider>
+			</body>
+		</html>
 	);
 }
