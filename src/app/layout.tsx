@@ -48,8 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </header>
 
     {/* Main Content */}
-    <main className='pt-22 md:pt-12 flex flex-col items-center w-full'>
-      <div className='w-full max-w-7xl px-4 pt-0 md:pt-6 pb-16 md:px-20 mx-auto'>
+    <main className='pt-22 md:pt-12 flex flex-col items-center w-full max-h-full bg-gray-100'>
+      <div className='w-full max-h-full max-w-7xl px-4 pt-0 md:pt-6 pb-16 md:px-20 mx-auto bg-amber-500'>
         {children}
       </div>
     </main>
