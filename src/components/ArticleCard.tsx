@@ -6,10 +6,10 @@ import Link from 'next/link';
 import type React from 'react';
 
 interface ArticleCardProps {
-    date: string;
-    title: string;
-    excerpt: string;
-    href?: string;
+	date: string;
+	title: string;
+	excerpt: string;
+	href?: string;
 }
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({ date, title, excerpt, href = '#' }) => {

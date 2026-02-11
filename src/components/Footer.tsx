@@ -4,38 +4,26 @@ import Link from 'next/link';
 
 export function Footer() {
 	return (
-		<footer className="w-full max-h-fit border-t border-background bg-background">
-			<div className="mx-auto w-full max-w-7xl flex flex-col items-center gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-36 md:py-12">
+		<footer className='max-h-fit w-full bg-background'>
+			<div className='mx-auto flex w-full max-w-7xl flex-col items-center gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-36 md:py-12'>
 				{/* Navigation Links */}
-				<nav className="flex flex-wrap justify-center gap-6">
-					<Link
-						href="/"
-						className="text-sm font-medium text-foreground hover:foreground/20 transition-colors"
-					>
+				<nav className='flex flex-wrap justify-center gap-6'>
+					<Link href='/' className='hover:foreground/20 font-medium text-foreground text-sm transition-colors'>
 						Home
 					</Link>
-					<Link
-						href="/about"
-						className="text-sm font-medium text-foreground hover:text-foreground/20 transition-colors"
-					>
+					<Link href='/about' className='font-medium text-foreground text-sm transition-colors hover:text-foreground/20'>
 						About
 					</Link>
-					<Link
-						href="/projects"
-						className="text-sm font-medium text-foreground hover:text-foreground/20 transition-colors"
-					>
+					<Link href='/projects' className='font-medium text-foreground text-sm transition-colors hover:text-foreground/20'>
 						Projects
 					</Link>
-					<Link
-						href="/users"
-						className="text-sm font-medium text-foreground hover:text-foreground/20 transition-colors"
-					>
+					<Link href='/users' className='font-medium text-foreground text-sm transition-colors hover:text-foreground/20'>
 						Uses
 					</Link>
 				</nav>
 
 				{/* Copyright */}
-				<p className="text-sm text-foreground/50">© 2022 John Doe. All rights reserved.</p>
+				<p className='text-foreground/50 text-sm'>© 2022 John Doe. All rights reserved.</p>
 			</div>
 		</footer>
 	);

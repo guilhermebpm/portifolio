@@ -7,13 +7,7 @@ export default function AboutPage() {
 			{/* Mobile: Photo on top */}
 			<div className='mb-8 md:hidden'>
 				<div className='relative aspect-[4/5] w-full overflow-hidden rounded-2xl'>
-					<Image
-						src='/p.jpg'
-						alt='Profile photo'
-						fill
-						className='object-cover'
-						priority
-					/>
+					<Image src='/p.jpg' alt='Profile photo' fill className='object-cover' priority />
 				</div>
 			</div>
 
@@ -28,18 +22,18 @@ export default function AboutPage() {
 					<div className='space-y-6 text-base text-muted-foreground leading-7'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur
-							adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem
-							ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..
+							adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum
+							dolor sit amet consectetur adipiscing elit Ut et massa mi..
 						</p>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur
-							adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem
-							ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..
+							adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum
+							dolor sit amet consectetur adipiscing elit Ut et massa mi..
 						</p>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur
-							adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem
-							ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..
+							adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum
+							dolor sit amet consectetur adipiscing elit Ut et massa mi..
 						</p>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur
@@ -53,13 +47,7 @@ export default function AboutPage() {
 					{/* Desktop Photo */}
 					<div className='mb-8 hidden md:block'>
 						<div className='relative aspect-[4/5] w-full overflow-hidden rounded-2xl'>
-							<Image
-								src='/p.jpg'
-								alt='Profile photo'
-								fill
-								className='object-cover'
-								priority
-							/>
+							<Image src='/p.jpg' alt='Profile photo' fill className='object-cover' priority />
 						</div>
 					</div>
 
