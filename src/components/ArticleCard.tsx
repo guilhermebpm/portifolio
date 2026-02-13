@@ -15,12 +15,9 @@ interface ArticleCardProps {
 export const ArticleCard: React.FC<ArticleCardProps> = ({ date, title, excerpt, href = '#' }) => {
 	return (
 		<article className='relative py-6 md:py-5 md:pl-0'>
-			{/* Vertical Line - only visible on desktop */}
-			<div className='absolute top-6 left-0 hidden h-4 w-0.5 bg-background md:block' />
-
 			{/* Date */}
-			<time className='mb-3 flex items-center gap-2 font-normal text-foreground/50 text-sm underline decoration-background underline-offset-2 md:no-underline'>
-				<span className='text-foreground text-lg'>|</span>
+			<time className='mb-3 flex items-center gap-3 font-normal text-foreground/50 text-sm underline decoration-background underline-offset-2 md:no-underline'>
+				<span className='inline-block h-5 w-[3px] shrink-0 rounded-full bg-foreground/20 dark:bg-foreground/30' />
 				{date}
 			</time>
 
