@@ -12,17 +12,17 @@ const skills: Skill[] = [
 	{
 		name: 'HTML',
 		level: 50,
-		icon: '/html.svg',
+		icon: '/portifolio/html.svg',
 	},
 	{
 		name: 'CSS',
 		level: 55,
-		icon: '/css.svg',
+		icon: '/portifolio/css.svg',
 	},
 	{
 		name: 'JavaScript',
 		level: 50,
-		icon: '/js.svg',
+		icon: '/portifolio/js.svg',
 	},
 ];
 

@@ -34,9 +34,9 @@ export function ThemeToggle() {
 			aria-label='Toggle dark mode'
 		>
 			{theme === 'dark' ? (
-				<Image src='/Moon.svg' alt='Moon icon' width={24} height={24} />
+				<Image src='/portifolio/Moon.svg' alt='Moon icon' width={24} height={24} />
 			) : (
-				<Image src='/Sun.svg' alt='Sun icon' width={24} height={24} />
+				<Image src='/portifolio/Sun.svg' alt='Sun icon' width={24} height={24} />
 			)}
 		</button>
 	);
