@@ -72,9 +72,9 @@ export default function ProjectCard() {
 						className='mt-auto flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent'
 					>
 						{/* Light mode icon */}
-						<img src='/Link.png' alt='Link' width={16} height={16} className='block dark:hidden' />
+						<img src='/portifolio/Link.png' alt='Link' width={16} height={16} className='block dark:hidden' />
 						{/* Dark mode icon */}
-						<img src='/link-dark.png' alt='Link' width={16} height={16} className='hidden dark:block' />
+						<img src='/portifolio/link-dark.png' alt='Link' width={16} height={16} className='hidden dark:block' />
 						<span>{project.link}</span>
 					</a>
 				</div>
