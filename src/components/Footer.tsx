@@ -23,7 +23,7 @@ export function Footer() {
 				</nav>
 
 				{/* Copyright */}
-				<p className='text-foreground/50 text-sm'>© 2022 John Doe. All rights reserved.</p>
+				<p className='text-foreground/50 text-sm'>© 2026 Guilherme Melo. All rights reserved.</p>
 			</div>
 		</footer>
 	);

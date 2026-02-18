@@ -16,7 +16,7 @@ export default function AboutPage() {
 				{/* Left Column - Heading + Text */}
 				<div className='flex-1'>
 					<h1 className='mb-8 font-bold text-[2.5rem] text-foreground leading-[1.15] tracking-tight md:text-[2.75rem]'>
-						I&apos;m Jane. I live in New York City, where I develop the future.
+						I&apos;m Guilherme Melo. I live in Salt Lake City, UT, where I develop the future.
 					</h1>
 
 					<div className='space-y-6 text-base text-muted-foreground leading-7'>
@@ -82,7 +82,7 @@ export default function AboutPage() {
 
 						{/* Email */}
 						<Link
-							href='mailto:jane@email.com'
+							href='mailto:guilherme@email.com'
 							className='flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground'
 						>
 							<svg
@@ -98,7 +98,7 @@ export default function AboutPage() {
 								<rect width='20' height='16' x='2' y='4' rx='2' />
 								<path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7' />
 							</svg>
-							<span>jane@email.com</span>
+							<span>guilherme@email.com</span>
 						</Link>
 					</div>
 				</div>
