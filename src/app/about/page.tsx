@@ -7,7 +7,7 @@ export default function AboutPage() {
 			{/* Mobile: Photo on top */}
 			<div className='mb-8 md:hidden'>
 				<div className='relative aspect-[4/5] w-full overflow-hidden rounded-2xl'>
-					<Image src='/p.jpg' alt='Profile photo' fill className='object-cover' priority />
+					<Image src='/portifolio/p.jpg' alt='Profile photo' fill className='object-cover' priority />
 				</div>
 			</div>
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
 					{/* Desktop Photo */}
 					<div className='mb-8 hidden md:block'>
 						<div className='relative aspect-[4/5] w-full overflow-hidden rounded-2xl'>
-							<Image src='/p.jpg' alt='Profile photo' fill className='object-cover' priority />
+							<Image src='/portifolio/p.jpg' alt='Profile photo' fill className='object-cover' priority />
 						</div>
 					</div>
 
@@ -57,7 +57,7 @@ export default function AboutPage() {
 							href='#'
 							className='flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground'
 						>
-							<Image src='/x.svg' alt='X' width={20} height={20} className='dark:invert' />
+							<Image src='/portifolio/x.svg' alt='X' width={20} height={20} className='dark:invert' />
 							<span>Follow me on X</span>
 						</Link>
 
@@ -65,7 +65,7 @@ export default function AboutPage() {
 							href='#'
 							className='flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground'
 						>
-							<Image src='/git.svg' alt='GitHub' width={20} height={20} className='dark:invert' />
+							<Image src='/portifolio/git.svg' alt='GitHub' width={20} height={20} className='dark:invert' />
 							<span>Follow me on Github</span>
 						</Link>
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
 							href='#'
 							className='flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground'
 						>
-							<Image src='/linkedin.svg' alt='LinkedIn' width={20} height={20} className='dark:invert' />
+							<Image src='/portifolio/linkedin.svg' alt='LinkedIn' width={20} height={20} className='dark:invert' />
 							<span>Follow me on LinkedIn</span>
 						</Link>
 

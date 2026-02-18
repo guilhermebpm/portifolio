@@ -11,37 +11,37 @@ interface Project {
 
 const projects: Project[] = [
 	{
-		logo: '/svg.png',
+		logo: '/portifolio/svg.png',
 		name: 'Company',
 		details: 'Creating technology to empower civilians to explore space on their own terms.',
 		link: 'https://company.com',
 	},
 	{
-		logo: '/svg.png',
+		logo: '/portifolio/svg.png',
 		name: 'Company',
 		details: 'Creating technology to empower civilians to explore space on their own terms.',
 		link: 'https://company.com',
 	},
 	{
-		logo: '/svg.png',
+		logo: '/portifolio/svg.png',
 		name: 'Company',
 		details: 'Creating technology to empower civilians to explore space on their own terms.',
 		link: 'https://company.com',
 	},
 	{
-		logo: '/svg.png',
+		logo: '/portifolio/svg.png',
 		name: 'Company',
 		details: 'Creating technology to empower civilians to explore space on their own terms.',
 		link: 'https://company.com',
 	},
 	{
-		logo: '/svg.png',
+		logo: '/portifolio/svg.png',
 		name: 'Company',
 		details: 'Creating technology to empower civilians to explore space on their own terms.',
 		link: 'https://company.com',
 	},
 	{
-		logo: '/svg.png',
+		logo: '/portifolio/svg.png',
 		name: 'Company',
 		details: 'Creating technology to empower civilians to explore space on their own terms.',
 		link: 'https://company.com',
