@@ -1,9 +1,7 @@
 'use client';
 
-// biome-ignore assist/source/organizeImports: <explanation>
 import type React from 'react';
 import Link from 'next/link';
-import type React from 'react';
 
 interface ArticleCardProps {
 	date: string;
