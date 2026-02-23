@@ -23,6 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='en' suppressHydrationWarning>
 			<body className={`${robotoSans.variable} bg-background font-sans antialiased`}>
 				<ThemeProvider>
+					<div className='pointer-events-none fixed inset-y-0 left-0 z-40 hidden w-20 bg-zinc-50 dark:bg-black md:block' />
+					<div className='pointer-events-none fixed inset-y-0 right-0 z-40 hidden w-20 bg-zinc-50 dark:bg-black md:block' />
 					<div className='flex min-h-screen flex-col'>
 						<header className='fixed z-60 mx-auto h-22 w-full backdrop-blur-md md:h-18 md:w-full md:px-20'>
 							<div className='mx-auto flex h-22 w-full flex-row items-start justify-between px-4 py-6 md:h-18 md:max-w-7xl md:px-24 md:pt-5 md:pb-5'>
